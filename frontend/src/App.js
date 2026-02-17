@@ -351,7 +351,7 @@ function App() {
           <div style={{ textAlign: "center", padding: "40px 0", borderTop: "1px solid rgba(0,0,0,0.05)", color: "#636e72" }}>
             <p style={{ fontWeight: "600" }}>© 2026 Electronics Price Intelligence</p>
             <p>Need Help? support@ hemanthvulli531@gmail.com</p>
-            <p style={{ marginTop: "10px" }}>Built with ❤️ by <strong>Mohan</strong></p>
+            <p style={{ marginTop: "10px" }}>Built  by <strong>Mohan Vulli</strong></p>
           </div>
 
         </div>
