@@ -23,6 +23,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/ping", (req, res) => {
+  res.status(200).send("Server Alive 🚀");
+});
+
+
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 /* ================= HYBRID CACHE SETUP ================= */
