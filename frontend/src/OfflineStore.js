@@ -19,7 +19,7 @@ function OfflineStore({ onBack }) {
 
       try {
         const res = await fetch(
-          `http://localhost:5000/api/offline-stores?lat=${latitude}&lng=${longitude}`
+          `https://price-intel-rnjr.onrender.com/api/offline-stores?lat=${latitude}&lng=${longitude}`
         );
 
         const data = await res.json();

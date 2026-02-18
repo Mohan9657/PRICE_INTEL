@@ -60,7 +60,7 @@ function App() {
     setQuery(value);
 
     if (value.length > 0) {
-      const res = await fetch(`http://localhost:5000/api/suggest?q=${value}`);
+      const res = await fetch(`https://price-intel-rnjr.onrender.com/api/suggest?q=${value}`);
       const data = await res.json();
       setSuggestions(data);
     } else {
@@ -69,7 +69,7 @@ function App() {
   };
 
   const searchProducts = async (searchText = query) => {
-    const res = await fetch(`http://localhost:5000/api/search?q=${searchText}`);
+    const res = await fetch(`https://price-intel-rnjr.onrender.com/api/search?q=${searchText}`);
     const data = await res.json();
 
     setResults(data);
@@ -90,7 +90,7 @@ function App() {
     setMessage("");
 
     const res = await fetch(
-      `http://localhost:5000/api/live-price/${p._id}`
+      `https://price-intel-rnjr.onrender.com/api/live-price/${p._id}`
     );
     const data = await res.json();
     setPrices(data);
@@ -108,7 +108,7 @@ function App() {
     setShowAdvice(false);
     setMessage("");
 
-    const res = await fetch("http://localhost:5000/api/festival-suggestion");
+    const res = await fetch("https://price-intel-rnjr.onrender.com/api/festival-suggestion");
     const data = await res.json();
     setFestivalMessage(data.message);
   };
@@ -123,7 +123,7 @@ function App() {
       return;
     }
 
-    const res = await fetch("http://localhost:5000/api/price-alert", {
+    const res = await fetch("https://price-intel-rnjr.onrender.com/api/price-alert", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
